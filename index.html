@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="menu">
+        <div class="logo">
+          <h2>My<span>Logo</span></h2>
+        </div>
+
+        <ul>
+          <li>
+            <a href="#" class="active" onclick="markMenuItem(this)">Homme</a>
+          </li>
+          <li><a href="#" onclick="markMenuItem(this)">About</a></li>
+          <li><a href="#" onclick="markMenuItem(this)">Services</a></li>
+          <li><a href="#" onclick="markMenuItem(this)">Portfolio</a></li>
+          <li><a href="#" onclick="markMenuItem(this)">Contact</a></li>
+        </ul>
+
+        <div id="menuBtn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="infoText">
+          <p>Hello, My Name is</p>
+          <h1>Bettaibi<span>Chokri</span></h1>
+          <p>Proffessional Web Designer & Developer</p>
+          <button>Download CV</button>
+          <div class="socialMediaIcons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

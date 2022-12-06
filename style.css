@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color:#000000;
+    color: white;
+}
+.container .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    height: 70px;
+}
+.container .logo{
+    color: #dedce1;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.container .logo span{
+    padding-left: 10px;
+    color: yellow;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline-table;
+    padding: 0px 20px;
+}
+.menu ul li a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #dedce1;
+    font-size: 20px;
+}
+.menu ul li a::after{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 1px;
+    background-color: yellow;
+    top: 110%;
+    left: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+.menu ul li a:hover::after{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.menu ul li a.avtive::after{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.menu #menuBtn{
+    cursor: pointer;
+    user-select: none;
+    display: none;
+}
+#menuBtn .bar{
+    width: 26px;
+    height: 3px;
+    background-color: #dedce1;
+    margin: 5px auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+    -webkit-transition: 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+    -moz-transition: 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+    -ms-transition: 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+    -o-transition: 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+}
+.container main{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: url(IMG_20210213_0005161.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+main .infoText{
+    padding: 0 8%;
+}
+.infoText p{
+    color: #79747b;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.infoText h1{
+    color: #dedce1;
+    font-size: 50px;
+    padding: 8px 0px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #333, -2px -2px 2px #333;
+}
+.infoText h1 span{
+    color: yellow;
+    padding-left: 10px;
+}
+.infoText button{
+    padding: 10px 12px;
+    border: 1px solid #79747b;
+    border-radius: 20px;
+    outline: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #000000;
+    color: #79747b;
+    margin-top: 40px;
+    cursor: pointer;
+    transform: all 0.4s;
+    -webkit-transform: all 0.4s;
+    -moz-transform: all 0.4s;
+    -ms-transform: all 0.4s;
+    -o-transform: all 0.4s;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.infoText button:hover{
+    color: yellow;
+}
+.socialMediaIcons{
+    position: absolute;
+    bottom: 60px;
+    left:8%;
+}
+.socialMediaIcons a i{
+    font-size: 24px;
+    padding-right: 20px;
+    color: #dedce1;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+.socialMediaIcons a i:hover{
+    color: yellow;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+@media(max-width: 768px){
+    .menu #menuBtn{
+        display: block;
+    }
+    .menu ul{
+        position: fixed;
+        width: 250px;
+        height: calc(100vh - 70px);
+        top: 70px;
+        right: -250px;px;
+        background-color: #232323;
+        border-radius: 30% 0% 0% 80%;
+        -webkit-border-radius: 30% 0% 0% 80%;
+        -moz-border-radius: 30% 0% 0% 80%;
+        -ms-border-radius: 30% 0% 0% 80%;
+        -o-border-radius: 30% 0% 0% 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-top: 1px solid black;
+        transition: right 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+        -webkit-transition: right 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+        -moz-transition: right 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+        -ms-transition: right 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+        -o-transition: right 0.4s cubic-bezier(1, 0.2, 0.2, 1);
+}
+    .menu ul li{
+        padding: 20px;
+        letter-spacing: 2px;
+    }
+    .menu ul li:nth-child(1){
+        margin-top: 30px;
+    }
+    .container .menu{
+        background-color: #232323;
+    }
+    .container main[
+        background-position: center;
+    ]
+    #menuBtn.active .bar:nth-child(2){
+        transform: translateX(-30px);
+        -webkit-transform: translateX(-30px);
+        -moz-transform: translateX(-30px);
+        -ms-transform: translateX(-30px);
+        -o-transform: translateX(-30px);
+        opacity: 0;
+}
+    #menuBtn.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        -webkit-transform: translateY(8px) rotate(45deg);
+        -moz-transform: translateY(8px) rotate(45deg);
+        -ms-transform: translateY(8px) rotate(45deg);
+        -o-transform: translateY(8px) rotate(45deg);
+}
+        #menuBtn.active .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+            -webkit-transform: translateY(-8px) rotate(-45deg);
+            -moz-transform: translateY(-8px) rotate(-45deg);
+            -ms-transform: translateY(-8px) rotate(-45deg);
+            -o-transform: translateY(-8px) rotate(-45deg);
+}
+        .menu ul.active{
+            right: 0;
+        }
+}
